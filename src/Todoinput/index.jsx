@@ -25,7 +25,8 @@ const AddToDo = ({inputValue, setInputValue, list, setList}) => {
     <form onSubmit={handleSubmit} className='todo-input'>
         <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="  Add todo" />
         <button type="submit">+</button>
-        <ToastContainer />
+        <ToastContainer position="top-center" autoClose={2000}
+/>
     </form>
   )
 }
