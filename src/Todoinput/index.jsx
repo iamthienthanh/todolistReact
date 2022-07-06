@@ -16,10 +16,7 @@ const AddToDo = ({inputValue, setInputValue, list, setList}) => {
         }
         else {
             toast.error("empty input!!")
-        }
-        
-        
-        
+        }  
     };
     return (
     <form onSubmit={handleSubmit} className='todo-input'>

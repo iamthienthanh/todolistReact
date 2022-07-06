@@ -8,6 +8,7 @@ const TodoList = ({list, setList}) => {
     const deleteToDo = (todo) => {
         if (todo.complete) {
             setList(list.filter(item => item.id!==todo.id));
+            
         } else {
             toast.error("Complete it!!!");
         }      

@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import AddToDo from './Todoinput';
 import TodoList from './Todolist';
 
 function App() {
   const [inputValue, setInputValue] = useState('')
-  const [list, setList] = useState([])
-
+  const [list, setList] = useState(JSON.parse(localStorage.getItem('list')));
+  useEffect(() => {
+    localStorage.setItem('list', JSON.stringify(list));
+  }, [list]);
   const date = new Date();
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -29,5 +31,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
