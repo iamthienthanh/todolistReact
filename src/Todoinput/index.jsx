@@ -1,4 +1,6 @@
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddToDo = ({inputValue, setInputValue, list, setList}) => {
     const handleSubmit = (e) => {
@@ -10,6 +12,10 @@ const AddToDo = ({inputValue, setInputValue, list, setList}) => {
             'complete': false
         }]);
         setInputValue('')
+        toast.success("Try your best!!!")
+        }
+        else {
+            toast.error("empty input!!")
         }
         
         
@@ -19,6 +25,7 @@ const AddToDo = ({inputValue, setInputValue, list, setList}) => {
     <form onSubmit={handleSubmit} className='todo-input'>
         <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="  Add todo" />
         <button type="submit">+</button>
+        <ToastContainer />
     </form>
   )
 }

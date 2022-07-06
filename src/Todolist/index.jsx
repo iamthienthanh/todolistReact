@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const TodoList = ({list, setList}) => {
     const completeTodo = (id) => {
