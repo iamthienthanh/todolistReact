@@ -8,10 +8,10 @@ const TodoList = ({list, setList}) => {
     <div className='todo-list'>
         {list.map((todo, index) => {
             return (
-                <div key={index} className='todo'>
+                <div key={index} className={`todo ${todo.complete ? 'finish' : ''}`}>
                     <div className="todo-left">
                         <i onClick={() => completeTodo(todo.id)} className={`fa-regular ${todo.complete ? 'fa-circle-check' : 'fa-circle'  }`}></i>
-                        <span className="todo-name">{todo.task}</span>
+                        <span className={`${todo.complete ? 'done' : ''}`}>{todo.task}</span>
                     </div>
                     <i class="fa-solid fa-trash"></i>
                 </div>

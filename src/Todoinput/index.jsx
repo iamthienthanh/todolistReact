@@ -3,13 +3,17 @@ import React from 'react'
 const AddToDo = ({inputValue, setInputValue, list, setList}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
-        setList([...list,{
+        if (inputValue) {
+            setList([...list,{
             'id': list.length+1,
             'task': inputValue,
             'complete': false
         }]);
         setInputValue('')
-        console.log(list);
+        }
+        
+        
+        
     };
     return (
     <form onSubmit={handleSubmit} className='todo-input'>

@@ -5,19 +5,7 @@ import TodoList from './Todolist';
 
 function App() {
   const [inputValue, setInputValue] = useState('')
-  const [list, setList] = useState([{
-    'id' : 1,
-    'task' : 'Do homework',
-    'complete' : false
-  },{
-    'id' : 2,
-    'task' : 'Add to Do',
-    'complete' : false
-  },{
-    'id' : 3,
-    'task' : 'Do something else',
-    'complete' : false
-  }])
+  const [list, setList] = useState([])
 
   const date = new Date();
   const year = date.getFullYear();

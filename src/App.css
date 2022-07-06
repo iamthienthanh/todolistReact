@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
+    min-height: 700px;
 }
 .AppTitle {
     text-align: center;
@@ -54,4 +55,10 @@
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
+}
+.done {
+    text-decoration: line-through;
+}
+.todo.finish {
+    background-color: rgb(183, 121, 5);
 }
